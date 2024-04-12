@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import SideMenu from "./SideMenu";
 
+const list = [
+  {
+    id: "duhdas",
+    workspace: "Workspace 1",
+    view: ["View 1", "View 2", "View 3"],
+    icon: "icon1",
+  },
+  {
+    id: "fasfawe",
+    workspace: "Workspace 2",
+    view: ["View 4", "View 5", "View 6"],
+    icon: "icon2",
+  },
+  {
+    id: "safasf",
+    workspace: "Workspace 3",
+    view: [],
+    icon: "icon2",
+  },
+];
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <SideMenu header=" Nested List Items" listData={list} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
